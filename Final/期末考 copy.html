@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介紹台南</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            width: 100%;
+        }
+        
+        .header {
+            background-color: #f8c0df;
+            color: blue;
+            padding: 15px;
+        }
+        
+        .section {
+            width: 100%;
+            font-size: 20px;
+            text-indent: 2em;
+            font-family: "標楷體";
+        }
+        
+        .aa {
+            background-color: #7FFFD4;
+        }
+        
+        .logo {
+            width: 95px;
+        }
+        
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: gray;
+            color: yellow;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        
+        .footer {
+            background-color: lawngreen;
+            color: red;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            <! -- 縮放過程中不超過原來大小-->height: auto;
+        }
+        /* Create four equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #275a51;
+            color: #fe4d59;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .c {
+            color: red;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 42px;
+            font-family: "風雅宋體";
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 4px 10px;
+            background-color: #f8c0df;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: MediumSeaGreen;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: rgb(161, 30, 30);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px rgb(151, 92, 92), 0px -8px 0px red;
+        }
+        
+        nav {
+            width: 40%;
+            height: 19vh;
+            background-color: rgba(135, 206, 250, 0.74);
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #eb240f;
+            padding: 10px 20px;
+            border-bottom: 1px solid gray;
+            font-family: "標楷體";
+            font-size: 18px;
+        }
+        
+        a:hover {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+            .col-1 {
+                width: 8.33%;
+            }
+            .col-2 {
+                width: 16.66%;
+            }
+            .col-3 {
+                width: 25%;
+            }
+            .col-4 {
+                width: 33.33%;
+            }
+            .col-5 {
+                width: 41.66%;
+            }
+            .col-6 {
+                width: 50%;
+            }
+            .col-7 {
+                width: 58.33%;
+            }
+            .col-8 {
+                width: 66.66%;
+            }
+            .col-9 {
+                width: 75%;
+            }
+            .col-10 {
+                width: 83.33%;
+            }
+            .col-11 {
+                width: 91.66%;
+            }
+            .col-12 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="aa">
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="https://miniso-tw.com.tw/" target="_blank"><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cea248a64a8b0001d122d10/800x.png?">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="https://www.twtainan.net/" target="_blank">台南旅遊網</a>
+            <a href="https://culture.tainan.gov.tw/index.php" target="_blank">台南文化局</a>
+            <a href="https://traffic.tainan.gov.tw/" target="_blank">台南交通局</a>
+        </nav>
+    </div>
+    <div class="title">
+        <h2>台南地名由來</h2>
+    </div>
+    <div class="section">
+        台南市位於西南部的嘉南平原上，西元1631年，荷蘭人在此地蓋了座「普羅民遮城」(又名紅毛城，即現今赤嵌樓的前身)，使台南成為全台最早發展的都市，在明永曆十五年(西元1661年)，鄭成功收復台南，改為「承天府」，確定了府治的地位。 到了清康熙二十二年(西元1683)年，台灣收歸於清朝的版圖之後，改為「台灣府」，正式列為台灣府治。直到了清光緒十三年(西元1887年)建設台灣省後，才又改為「台南府」，因此「台南」這個地名一直沿用至今。
+    </div>
+
+    <div class="title">
+        <h2>關於台南</h2>
+    </div>
+    <div class="section">
+        <mark>台南市是中華民國的直轄市，臺灣六都之一</mark>，位於臺灣西南部，其西面臨臺灣海峽、東面臨阿里山山脈、北面與嘉義縣鄰接 、南面與高雄市鄰接。面積2,191.65平方公里，為台灣各縣市中，平原區比例最大，地形最平緩的城市，耕地面積全臺第一，盛產豐富的農產品。阡陌交錯，公路道路為全臺最多，全市文化古蹟遍布，多元文化並存。全市設籍人口187萬人。其政府所在地位於安平區及新營區，採雙市政中心模式，人口最多的轄區為永康區。臺南市為南臺灣文化、學術、教育、科技之中心，包括國家圖書館、中央研究院、工業技術研究院、科學園區南部分址均位在臺南。依據平面媒體民調，台灣縣市競爭力排名，臺南市連續3年高居六都第二名，減債能力也排名第二。<mark>現以傳統小吃、夜市商圈、旅遊度假、古蹟文化、山川田園、溫泉戲水吸引觀光人潮，並以宜居樂活城市著稱</mark>。
+    </div>
+    <div class="title">
+        <h2>廟宇文化</h2>
+    </div>
+    <div class="section">
+        台灣擁有多元信仰的文化下，「廟宇文化」近年在國際事件上頻頻亮相，從寺廟建築、佛神繪畫、參拜儀式到廟會活動等等，百年來所建構的信仰文化，在在吸引外國遊客的目光。但除了進廟參拜以外，不妨抬頭細細仰望廟宇上那雕梁畫棟的壁雕，或是刻劃細膩的粧佛藝術。其細膩度其實並不輸國內外的歷史名畫，更是常常成為國外攝影家的取材題材，像是來自泰國的Theerasak Saksritawee的作品—鏡頭下的台灣便將廟宇拍得十分優美，<mark>尤其台南的廟宇建築藝術文化更是全台灣廟宇界的翹楚</mark>。以下整理出兩間來到台南值得一去，十分具有藝術價值的經典廟宇。
+    </div>
+    <div class="title">
+        <h2>習俗與祭祀節慶</h2>
+    </div>
+    <div class="section">習俗 做十六歲：為臺南市特有的成年禮活動，在16歲成年的七夕，向兒童守護神「七娘媽」（即織女七仙女）敬謝，以開隆宮最為鼎盛。 祭祀節慶 鹽水蜂炮 南瀛五大香：指臺南沿海地區五個重要的廟宇遶境祭典，舉辦時三至四 年一次不等。五大香分別為：學甲慈濟宮學甲香、佳里金唐殿蕭壠香、 西港慶安宮西港香、麻豆代天府麻豆香、土城聖母廟土城香。 府城迎春（每年新年臺南市政府舉辦活動，迎合臺灣大年初二回娘家的習俗 夜間龍舟賽（全臺唯一夜間舉行夜間龍舟賽） 做十六歲（源於泉州，但有別於原鄉的成年禮） 鄭成功文化節
+        府城七夕藝術節 釋奠大典（源於古府城，全國唯一奉行「雅樂十三音」祭孔儀軌） 南方影展（主要以高雄及臺南為主）</div>
+
+
+    <div class="title">
+        <h2>特色名產</h2>
+    </div>
+    <div>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </div>
+
+
+    <div class="title">
+        <h2>台南小吃</h2>
+    </div>
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src="牛肉湯.jpg " width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>牛肉湯</h3>
+                <p>台南的牛肉湯文化獨具一格，色澤透明卻味道濃郁的湯頭，以及超軟嫩的粉紅色牛肉片。多以川燙為主。，也可以炒牛肉。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="鱔魚意麵.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>鱔魚意麵</h3>
+                <p>分為乾、濕兩種，經過大火快炒出的鱔魚，散發微微焦香，勾芡過後仍保持的微脆口感，是鱔魚新鮮的最大證明。
+
+
+                </p>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="滷肉飯.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>滷肉飯</h3>
+                <p>臺南食府正宗的滷肉飯，選用在地黑毛豬，配上壽司米，以古法料理的肉燥成就讓人懷念的美味。</p>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <h2>台南古蹟</h2>
+    </div>
+
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src="赤崁樓.jpg " width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>赤崁樓</h3>
+                <p>赤崁樓乃荷蘭人於西元1652年創建，原稱普羅民遮城，漢人則稱之為「赤崁樓」、「番仔樓」或「紅毛樓」，至今仍大約維持原貌。 </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="安平古堡.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>安平古堡</h3>
+                <p>1975年配合觀光年計畫，台南市政府整修安平古堡範圍環境，在瞭望台上加一尖型屋頂，牆面漆成白色，就是現在我們看見的安平古堡的模樣。​
+                </p>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="孔廟.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>孔廟</h3>
+                <p>臺南孔子廟是臺灣第一座孔廟，位於臺南市中西區，建於西元1665年，為臺灣最早的文廟。清領初期是全臺童生唯一入學之所，因此稱「全臺首學」。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <h2>夜市美食</h2>
+    </div>
+
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src="蚵仔煎.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>蚵仔煎</h3>
+                <p>台南有名的蚵仔煎，尤其花園夜市裡賣的，料多，物超所值，值得來試試。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="臭豆腐.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>臭豆腐</h3>
+                <p>買之前會感覺臭臭的，不敢接觸，但一吃下去整個爆汁，超級酥脆。 </p>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="地瓜球.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>地瓜球</h3>
+                <p>夜市很熱賣的小吃之一，圓圓可愛的外皮，一口咬下酥酥脆脆，地瓜香氣。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <h2>消暑涼品</h2>
+    </div>
+
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src="芋頭粉圓.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>芋頭粉圓</h3>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="雪花冰.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>雪花冰</h3>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="芒果冰.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>芒果冰</h3>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="冰淇淋.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>冰淇淋</h3>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="黑工號嫩仙草.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>黑工號嫩仙草</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <h2>甜的國度~飲料推薦</h2>
+    </div>
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src="東洲黑糖.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>東洲黑糖奶鋪</h3>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="波哥.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>波哥</h3>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="小拍子.jpg" width="30" height="180">
+            </div>
+            <div class="text">
+                <h3>小拍子</h3>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="青蛙黑蛋奶.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>青蛙黑蛋奶</h3>
+            </div>
+        </div>
+        <div class="item ">
+            <div class="pic">
+                <img src="甜又鮮.jpg" width="50" height="180">
+            </div>
+            <div class="text">
+                <h3>甜又鮮</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer ">
+        &copy; B10856046許竣宇
+    </div>
+
+
+
+
+
+</body>
+
+</html>
