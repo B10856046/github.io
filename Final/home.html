@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://photo.s3.com.tw/look/Upload/BlogArticleImages/7756/20200122113042999_700_0_80.jpg">
+    <title>熊熊遇見你</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            background-color: #D6CABA;
+        }
+        
+        marquee {
+            color: rgb(212, 37, 37);
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 20px 10px;
+            background-color: #EBD8CC;
+            color: #90695D;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 20px 0;
+            background-color: #ffa;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #EBD8CC;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: rgb(107, 33, 20);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px rgb(107, 33, 20), 0px -8px 0px rgb(107, 33, 20);
+        }
+        
+        nav {
+            width: 30%;
+            height: 100vh;
+            background-color: #DEBFB6;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #624645;
+            padding: 10px 20px;
+            border-bottom: 1px solid #624645;
+        }
+        
+        nav a:hover {
+            color: red;
+            font-weight: bold;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+            marquee {
+                color: rgb(212, 37, 37);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cea248a64a8b0001d122d10/800x.png?" width="80px" height="50px">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="home.html">首頁</a>
+            <a href="https://www.fanfans.com.tw/pages/we-bare-bears" target="_blank">fanfans連結</a>
+            <a href="item.html">週邊商品</a>
+        </nav>
+    </div>
+    <marquee direction="right" height="30" scrollamount="5" behavior="alternate">We are bears
+    </marquee>
+    <div class="bg">
+        <img src=https://shoplineimg.com/5ab875018d1db9e3db00025b/5cb69681be751b0023e815d0/800x.jpg? height="400px">
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2 style="font-family:標楷體">熊熊遇見你</h2>
+                <p></p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1oGwxby8qp0MgV_S6JqteDrYeiwTzAqhTDaXsrFHeslq2p5cB&usqp=CAU">
+                    </div>
+                    <div class="text">
+                        <h3>大大</h3>
+                        <p> </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTM2PlB9wQJDQP52Gg-u24NZOaV_iWXBdez-CCwyGFoNnbLSO-L&usqp=CAU">
+                    </div>
+                    <div class="text">
+                        <h3>胖達</h3>
+                        <p> </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQuAccbjqC1G0-kBGgVj0bb_RdVZ-aTSKS1TH-mcGn1jvtWxTRj&usqp=CAU">
+                    </div>
+                    <div class="text">
+                        <h3>阿極</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRb5afLzwSQHtTBbg_Pp9-GJSw1W_tNssinTrYcl0dadnJBU_x&usqp=CAU">
+                    </div>
+                    <div class="text">
+                        <h3>帕小可</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://puui.qpic.cn/qqvideo_ori/0/j07763n2ser_496_280/0">
+                    </div>
+                    <div class="text">
+                        <h3>賣勾來</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <h2 style="font-family:標楷體">活動</h2>
+        <p></p>
+    </div>
+    <div class="two">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/202006/5ED46DB07A3EF1590980016.jpeg">
+                    </div>
+                    <div class="text">
+                        <a href="https://www.marieclaire.com.tw/lifestyle/taste/50234?atcr=aa2124" target="_blank">
+                            <h3>萌翻天！清心福全x熊熊遇見你超萌周邊登場，必買熊熊杯套、滑鼠墊</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201901/5C52B25DD6D1C1548923485.jpeg">
+                    </div>
+                    <div class="text">
+                        <a href="https://www.marieclaire.com.tw/lifestyle/news/40661?atcr=76fe8b" target="_blank">
+                            <h3>最有愛的熊類！熊熊遇見你正在台灣旅行中，旅遊之際不忘愛護動物、做公益！</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/201910/5DB46EDF906D01572105951.jpeg">
+                    </div>
+                    <div class="text">
+                        <a href="https://www.marieclaire.com.tw/lifestyle/news/40661?atcr=76fe8b" target="_blank">
+                            <h3>最有愛的熊類！熊熊遇見你正在台灣旅行中，旅遊之際不忘愛護動物、做公益！熊熊來襲！「家樂福X熊熊遇見你」推出超萌換購活動，必收藏的雙層玻璃杯、分隔便當盒</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        &copy; copyright 2020 by css
+    </div>
+
+
+
+
+
+</body>
+
+</html>

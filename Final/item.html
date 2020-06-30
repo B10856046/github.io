@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://photo.s3.com.tw/look/Upload/BlogArticleImages/7756/20200122113042999_700_0_80.jpg">
+    <title>熊熊遇見你</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            background-color: #D6CABA;
+        }
+        
+        marquee {
+            color: rgb(212, 37, 37);
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 20px 10px;
+            background-color: #EBD8CC;
+            color: #90695D;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 20px 0;
+            background-color: #ffa;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #EBD8CC;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: rgb(107, 33, 20);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px rgb(107, 33, 20), 0px -8px 0px rgb(107, 33, 20);
+        }
+        
+        nav {
+            width: 30%;
+            height: 100vh;
+            background-color: #DEBFB6;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #624645;
+            padding: 10px 20px;
+            border-bottom: 1px solid #624645;
+        }
+        
+        nav a:hover {
+            color: red;
+            font-weight: bold;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        .container {
+            width: 1200px;
+            margin: 0px auto;
+        }
+        /* Content */
+        
+        .container img {
+            width: 100%;
+            /*彈性盒子 又稱flexbox*/
+        }
+        
+        #content {
+            float: left;
+            width: 752px;
+            padding: 0px 0px 0px 0px;
+        }
+        /* Three Column Footer Content */
+        
+        #column1 {
+            float: left;
+            width: 384px;
+            margin-right: 20px;
+        }
+        
+        #column2 {
+            float: left;
+            width: 384px;
+        }
+        
+        #column3 {
+            float: right;
+            width: 384px;
+        }
+        
+        .box1 {
+            overflow: hidden;
+            height: 300px;
+            background: url(images/img04.jpg) no-repeat center bottom;
+        }
+        /* Three Column Content */
+        
+        #three-column {
+            overflow: hidden;
+            padding: 10px 0px 50px 0px;
+        }
+        
+        .box-style {
+            background: #FFFFFF;
+            text-align: center;
+        }
+        
+        #three-column .tbox1 {
+            float: left;
+            width: 384px;
+            margin-right: 20px;
+        }
+        
+        .box-style h2 {
+            padding: 10px 0px;
+            letter-spacing: -1px;
+            font-size: 22px;
+            color: #2D2D2D;
+        }
+        
+        .box-style .image {
+            width: 100%;
+        }
+        /*.box-style .content {
+            overflow: hidden;
+            width: 324px;
+            padding: 30px;
+        }*/
+        
+        @media screen and (min-width:768px) {
+            .container {
+                display: flex;
+                /*彈性盒子 又稱flexbox*/
+            }
+            .item-group {
+                display: flex;
+            }
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+            marquee {
+                color: rgb(212, 37, 37);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cea248a64a8b0001d122d10/800x.png?" width="80px" height="50px">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="home.html">首頁</a>
+            <a href="https://www.fanfans.com.tw/pages/we-bare-bears" target="_blank">fanfans連結</a>
+            <a href="item.html">週邊商品</a>
+        </nav>
+    </div>
+    <marquee direction="right" height="30" scrollamount="5" behavior="alternate">We are bears
+    </marquee>
+    <div class="bg">
+        <img src=https://shoplineimg.com/5ab875018d1db9e3db00025b/5cb69681be751b0023e815d0/800x.jpg? height="400px">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2 style="font-family:標楷體">週邊商品</h2>
+                <p>超過15項以上的週邊商品~</p>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dc11d8503f2900017d80d24/400x.webp?source_format=gif" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-扭扭鑰匙圈-大大款</h2>
+                            <p>NT$199</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dc1214f5cc209001a1c5731/400x.webp?source_format=gif" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-扭扭鑰匙圈-胖達款</h2>
+                            <p>NT$199</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dc121ff38c6f40026579242/400x.webp?source_format=gif" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-扭扭鑰匙圈-阿極款</h2>
+                            <p>NT$199</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div class="image"><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d77629c82374900148f50aa/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-馬克杯-大大款</h2>
+                            <p>NT$580</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div class="image"><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d7762f18237491f348f36d3/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-馬克杯-胖達款</h2>
+                            <p>NT$580</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d7761d56ada78003e47582a/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-馬克杯-阿極款</h2>
+                            <p>NT$580</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d77608d05daf7001a480072/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-防水杯套-大大款</h2>
+                            <p>NT$250</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d7760f487a9d779ca2b8757/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-防水杯套-胖達款</h2>
+                            <p>NT$250</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d775fa5483d750017dc5682/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-防水杯套-阿極款</h2>
+                            <p>NT$250</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d775bbb4ac36000358f0ea0/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-老帽-大大款</h2>
+                            <p>NT$790</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d775bf187a9d76fe72b92f2/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-老帽-胖達款</h2>
+                            <p>NT$790</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d775b33c53b5074aed5d68f/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-老帽-阿極款</h2>
+                            <p>NT$790</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8e329ae0d75003e0a5a70/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛收納包-大大款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8e3c46e3a120032c44e41/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛收納包-胖達款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8e4500074650029557232/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛收納包-阿極款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf779d2b3eeba00207bfc3f/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-束髮袋-大大款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf77a5a9c324a002f999454/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-束髮袋-胖達款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf77ae2b2e894003bbf3e2e/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-束髮袋-阿極款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dc26da3e250030011097d60/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-滑鼠墊-大大款</h2>
+                            <p>NT$150</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dc26e1f3e22ba0032cd9d19/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-滑鼠墊-胖達款</h2>
+                            <p>NT$150</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dc26bd55df625001a6c50d4/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-滑鼠墊-阿極款</h2>
+                            <p>NT$150</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf73c1c06b79130338fa754/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-大臉抱枕-大大款</h2>
+                            <p>NT$999</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf73c9e9dcc8c00358c19e0/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-大臉抱枕-胖達款</h2>
+                            <p>NT$999</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dd65559275d73001b2cda46/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-大臉抱枕-阿極款</h2>
+                            <p>NT$999</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dd79ba65818b1002a7788a7/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-資料L夾-綜合款</h2>
+                            <p>NT$49</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dd79c55275d73001b2d162a/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-資料L夾-胖達款</h2>
+                            <p>NT$49</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5dd79cd8275d7361d22d1890/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-資料L夾-阿極款</h2>
+                            <p>NT$49</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8da5b0074650011557409/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-硬封面筆記本-大大款</h2>
+                            <p>NT$159</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf7895c7596050011770c79/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-線圈筆記本-胖達款</h2>
+                            <p>NT$120</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8dbd8d449f4001d13a66d/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-硬封面筆記本-阿極款</h2>
+                            <p>NT$159</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5de63091d9836232f722cc7b/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-RITEx熊熊遇見你 V4兩用迷你彈頭包-毛呢灰-聯名款</h2>
+                            <p>NT$599</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5de628b022f69e001bc6f6bf/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-RITEx熊熊遇見你 F3橢圓小腰包-毛呢灰-聯名款</h2>
+                            <p>NT$599</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5de622a722f69e0015c6f4a2/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-RITEx熊熊遇見你 Z07通關小側背包-毛呢灰-聯名款</h2>
+                            <p>NT$599</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d9c4453169009001ef3306e/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛 6吋/10吋-坐姿款</h2>
+                            <p>NT$199</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5e8b07ef109f4e0036db11ed/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛 12吋-站姿款</h2>
+                            <p>NT$299</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5da6e4aa4b5d9f6641caa4c7/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛 10吋/18吋-趴姿款</h2>
+                            <p>NT$299</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf4bfbcb69ce80035aba2b7/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-證照套-綜合款</h2>
+                            <p>NT$590</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf4cb3c93b8fa0023b2430e/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-證照套-胖達款</h2>
+                            <p>NT$590</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8c97f5a90b1003bf4402a/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-證照套-阿極款</h2>
+                            <p>NT$590</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d775dac65916127d3904677/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-繽紛糖果傘-綜合款</h2>
+                            <p>NT$699</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5e3d41e1313ff7002d13923c/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-手提化妝包-綜合款</h2>
+                            <p>NT$599</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5e0d75a805069d17d2ac37a9/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-飲料小提袋-綜合款</h2>
+                            <p>NT$350</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d78d7970d56cc5c9e5fb318/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-充電線保護套-綜合款</h2>
+                            <p>NT$199</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8f0c95a90b1001af447fc/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-磁碟組-綜合款</h2>
+                            <p>NT$199</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5e282c5dd4cdbd33a98f9c2f/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-便利貼-綜合款</h2>
+                            <p>NT$199</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d9c2a3eb953390026019a51/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-頭型厚抱枕-綜合款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5d9ab80d9d2e28003ba82b12/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-絨毛3D拖鞋-綜合款</h2>
+                            <p>NT$399</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8e8fe1691070020555cd0/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-零錢包-綜合款</h2>
+                            <p>NT$320</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="three-column" class="container">
+                <div class="tbox1">
+                    <div class="box-style box-style01">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf4bf339507650038007f42/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-收納小袋-綜合款</h2>
+                            <p>NT$99</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style02">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf760d552d13c0011b89502/400x.webp?source_format=png" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-方形卡鏡-綜合款</h2>
+                            <p>NT$80</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tbox1">
+                    <div class="box-style box-style03">
+                        <div class="content">
+                            <div><img src="https://shoplineimg.com/5ab875018d1db9e3db00025b/5cf8c6bee7ced8003f184eec/400x.webp?source_format=jpg" width="324" height="200" alt="" /></div>
+                            <h2>熊熊遇見你-可愛螢幕擦-綜合款</h2>
+                            <p>NT$60</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            &copy;B10856046
+        </div>
+
+
+
+
+
+</body>
+
+</html>
